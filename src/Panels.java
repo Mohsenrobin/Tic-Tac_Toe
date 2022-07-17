@@ -8,19 +8,12 @@ import java.awt.event.KeyListener;
 
 import javax.swing.JPanel;
 
-@SuppressWarnings("serial")
 public class Panels extends JPanel implements KeyListener {
 
 	// Buttons and Labels
-	private Buttons[] buttons;
-	private Labels[] labels;
+	private final Buttons[] buttons;
+	private final Labels[] labels;
 	GridBagConstraints c = new GridBagConstraints();
-
-	// Initial Buttons and Labels before creating the instance
-	{
-
-
-	}
 
 	// Constructor, where we initial keyboard functions
 	public Panels() {
@@ -42,19 +35,6 @@ public class Panels extends JPanel implements KeyListener {
 		setSize(800, 600);
 		add(getPanel1(1, 1), c);
 		add(getPanel2(1, 0), c);
-	}
-
-	// Main Panel which contains panel 1 and panel 2
-	public Panels createPanel() {
-
-		setPreferredSize(new Dimension(1000, 700));
-		setLayout(new GridBagLayout());
-		setBackground(Color.orange);
-		setSize(800, 600);
-		add(getPanel1(1, 1), c);
-		add(getPanel2(1, 0), c);
-		return this;
-
 	}
 
 	// First panel which holds the player names
@@ -155,33 +135,24 @@ public class Panels extends JPanel implements KeyListener {
 	@Override
 	public void keyPressed(KeyEvent e) {
 		switch (e.getKeyCode()) {
-		case KeyEvent.VK_NUMPAD1:
-			GameLogic.getGameLogic().play(1, labels[0], buttons[0]);
-			break;
-		case KeyEvent.VK_NUMPAD2:
-			GameLogic.getGameLogic().play(2, labels[1], buttons[1]);
-			break;
-		case KeyEvent.VK_NUMPAD3:
-			GameLogic.getGameLogic().play(3, labels[2], buttons[2]);
-			break;
-		case KeyEvent.VK_NUMPAD4:
-			GameLogic.getGameLogic().play(4, labels[3], buttons[3]);
-			break;
-		case KeyEvent.VK_NUMPAD5:
-			GameLogic.getGameLogic().play(5, labels[4], buttons[4]);
-			break;
-		case KeyEvent.VK_NUMPAD6:
-			GameLogic.getGameLogic().play(6, labels[5], buttons[5]);
-			break;
-		case KeyEvent.VK_NUMPAD7:
-			GameLogic.getGameLogic().play(7, labels[6], buttons[6]);
-			break;
-		case KeyEvent.VK_NUMPAD8:
-			GameLogic.getGameLogic().play(8, labels[7], buttons[7]);
-			break;
-		case KeyEvent.VK_NUMPAD9:
-			GameLogic.getGameLogic().play(9, labels[8], buttons[8]);
-			break;
+			case KeyEvent.VK_NUMPAD1 ->
+					GameLogic.getGameLogic().play(1, labels[0], buttons[0]);
+			case KeyEvent.VK_NUMPAD2 ->
+					GameLogic.getGameLogic().play(2, labels[1], buttons[1]);
+			case KeyEvent.VK_NUMPAD3 ->
+					GameLogic.getGameLogic().play(3, labels[2], buttons[2]);
+			case KeyEvent.VK_NUMPAD4 ->
+					GameLogic.getGameLogic().play(4, labels[3], buttons[3]);
+			case KeyEvent.VK_NUMPAD5 ->
+					GameLogic.getGameLogic().play(5, labels[4], buttons[4]);
+			case KeyEvent.VK_NUMPAD6 ->
+					GameLogic.getGameLogic().play(6, labels[5], buttons[5]);
+			case KeyEvent.VK_NUMPAD7 ->
+					GameLogic.getGameLogic().play(7, labels[6], buttons[6]);
+			case KeyEvent.VK_NUMPAD8 ->
+					GameLogic.getGameLogic().play(8, labels[7], buttons[7]);
+			case KeyEvent.VK_NUMPAD9 ->
+					GameLogic.getGameLogic().play(9, labels[8], buttons[8]);
 		}
 
 	}

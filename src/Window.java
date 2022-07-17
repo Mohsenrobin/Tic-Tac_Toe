@@ -3,7 +3,6 @@ import java.awt.Dimension;
 import javax.swing.JFrame;
 import javax.swing.WindowConstants;
 
-@SuppressWarnings("serial")
 //This is the main class which extends a JFrame library to create a window.
 public class Window extends JFrame {
 
@@ -37,16 +36,8 @@ public class Window extends JFrame {
 		return window;
 	}
 
-	public static void setWindow(Window window) {
-		Window.window = window;
-	}
-
 	public Greeting getGreetingPanel() {
 		return greetingPanel;
-	}
-
-	public void setGreetingPanel(Greeting greetingPanel) {
-		this.greetingPanel = greetingPanel;
 	}
 
 }

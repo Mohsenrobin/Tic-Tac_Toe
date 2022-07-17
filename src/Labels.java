@@ -3,19 +3,19 @@ import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
+import java.util.Objects;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-@SuppressWarnings("serial")
 public class Labels extends JLabel {
 
 	// The field that store the value of the label
 	private String value;
 
 	// Create Label using parameters
-	public JLabel createLabel(JPanel myPanel, String value, int x, int y,
-			GridBagConstraints c, int fontSize) {
+	public void createLabel(JPanel myPanel, String value, int x, int y,
+							GridBagConstraints c, int fontSize) {
 		this.value = value;
 		this.setText(getValue());
 		this.setVisible(false);
@@ -29,13 +29,13 @@ public class Labels extends JLabel {
 		c.insets = new Insets(3, 3, 3, 3);
 		myPanel.add(this, c);
 
-		return new JLabel();
+		new JLabel();
 	}
 
 	// Method to create the label of the winner
-	public JLabel getWinnerLabel() {
+	public void getWinnerLabel() {
 		setForeground(Color.red);
-		if (GameLogic.getGameLogic().getWinner() == "X")
+		if (Objects.equals(GameLogic.getGameLogic().getWinner(), "X"))
 			setText(Window.getWindow().getGreetingPanel().getPlayer1()
 					+ " is the Winner         ");
 		else
@@ -44,7 +44,6 @@ public class Labels extends JLabel {
 
 		setFont(new Font("Verdana", Font.BOLD, 35));
 		setVisible(true);
-		return this;
 	}
 
 	// Getter
@@ -52,8 +51,4 @@ public class Labels extends JLabel {
 		return value;
 	}
 
-	// Setter
-	public void setValue(String value) {
-		this.value = value;
-	}
 }

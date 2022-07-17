@@ -9,15 +9,8 @@ public class Window extends JFrame {
 
 	// The only instance of the window
 	private static Window window;
-
-
-
 	// The main Panel
 	private Greeting greetingPanel;
-
-	{
-
-	}
 
 	// Create window
 	public void createWindow() {
@@ -36,8 +29,6 @@ public class Window extends JFrame {
 	public static void main(String[] args) {
 		window = new Window();
 		window.createWindow();
-
-
 	}
 
 	// GETTERS AND SETTERS

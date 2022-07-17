@@ -1,18 +1,6 @@
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Font;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
-import java.awt.Insets;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import javax.swing.*;
+import java.awt.*;
 
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
-
-@SuppressWarnings("serial")
 public class Greeting extends JPanel {
 
 	private String player1;
@@ -22,10 +10,6 @@ public class Greeting extends JPanel {
 
 	public Panels getPanel() {
 		return panel;
-	}
-
-	public void setPanel(Panels panel) {
-		this.panel = panel;
 	}
 
 	private Panels panel;
@@ -42,16 +26,12 @@ public class Greeting extends JPanel {
 		c.gridx = x;
 		c.gridy = y;
 		c.insets = new Insets(3, 3, 3, 3);
-		button.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				Greeting.this.setVisible(false);
-				player2 = text2.getText();
-				player1 = text1.getText();
-				panel = new Panels();
-				Window.getWindow().add(panel);
-			}
+		button.addActionListener(e -> {
+			Greeting.this.setVisible(false);
+			player2 = text2.getText();
+			player1 = text1.getText();
+			panel = new Panels();
+			Window.getWindow().add(panel);
 		});
 		return button;
 	}
@@ -120,16 +100,8 @@ public class Greeting extends JPanel {
 		return player1;
 	}
 
-	public void setPlayer1(String player1) {
-		this.player1 = player1;
-	}
-
 	public String getPlayer2() {
 		return player2;
-	}
-
-	public void setPlayer2(String player2) {
-		this.player2 = player2;
 	}
 
 }

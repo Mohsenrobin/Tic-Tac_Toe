@@ -90,19 +90,6 @@ public class Panels extends JPanel implements KeyListener {
 		return panelTemp;
 	}
 
-	// Inner layer of panel 2
-	public void buttonPanel(JPanel panel11) {
-		buttons[0].createButtons(panel11, "One", 0, 0, c, 1, labels[0]);
-		buttons[1].createButtons(panel11, "Two", 1, 0, c, 2, labels[1]);
-		buttons[2].createButtons(panel11, "Three", 2, 0, c, 3, labels[2]);
-		buttons[3].createButtons(panel11, "Four", 0, 1, c, 4, labels[3]);
-		buttons[4].createButtons(panel11, "Five", 1, 1, c, 5, labels[4]);
-		buttons[5].createButtons(panel11, "Six", 2, 1, c, 6, labels[5]);
-		buttons[6].createButtons(panel11, "Seven", 0, 2, c, 7, labels[6]);
-		buttons[7].createButtons(panel11, "Eight", 1, 2, c, 8, labels[7]);
-		buttons[8].createButtons(panel11, "Nine", 2, 2, c, 9, labels[8]);
-	}
-
 	// Inner layer of panel 1
 	public void labelPanel1(JPanel panel) {
 		labels[9].createLabel(panel, Window.getWindow().getGreetingPanel().getPlayer1() + " is Player X ", 0,
@@ -115,6 +102,19 @@ public class Panels extends JPanel implements KeyListener {
 
 		labels[10].setVisible(true);
 
+	}
+
+	// Inner layer of panel 2
+	public void buttonPanel(JPanel panel11) {
+		buttons[0].createButtons(panel11, "One", 0, 0, c, 1, labels[0]);
+		buttons[1].createButtons(panel11, "Two", 1, 0, c, 2, labels[1]);
+		buttons[2].createButtons(panel11, "Three", 2, 0, c, 3, labels[2]);
+		buttons[3].createButtons(panel11, "Four", 0, 1, c, 4, labels[3]);
+		buttons[4].createButtons(panel11, "Five", 1, 1, c, 5, labels[4]);
+		buttons[5].createButtons(panel11, "Six", 2, 1, c, 6, labels[5]);
+		buttons[6].createButtons(panel11, "Seven", 0, 2, c, 7, labels[6]);
+		buttons[7].createButtons(panel11, "Eight", 1, 2, c, 8, labels[7]);
+		buttons[8].createButtons(panel11, "Nine", 2, 2, c, 9, labels[8]);
 	}
 
 	// Inner layer of panel 2

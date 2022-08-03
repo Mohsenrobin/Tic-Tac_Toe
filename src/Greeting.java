@@ -90,7 +90,6 @@ public class Greeting extends JPanel {
 		add(getText2(0, 5, c), c);
 		add(getGreetingLabels("", 0, 6, c, 100, 20, 30, Color.blue), c);
 		add(getGreetingButton(0, 7, c), c);
-		//panel.add(this, c);
 
 	}
 
